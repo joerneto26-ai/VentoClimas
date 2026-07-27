@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ventoclimas.mx/sitemap.xml
