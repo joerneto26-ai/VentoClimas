@@ -43,15 +43,19 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-16 pt-24 sm:px-8 sm:pb-24 sm:pt-32">
         <Reveal>
-          <span className="glass-dark inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-bone-100/90">
-            <GoogleG className="h-4 w-4" />
-            <span className="flex items-center gap-1 text-sage-300">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="h-3 w-3" />
-              ))}
+          <span className="glass-dark inline-flex max-w-full flex-wrap items-center justify-center gap-x-2 gap-y-1 rounded-full px-4 py-2 text-xs font-medium text-bone-100/90">
+            <span className="inline-flex items-center gap-2 whitespace-nowrap">
+              <GoogleG className="h-4 w-4 shrink-0" />
+              <span className="flex items-center gap-1 text-sage-300">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-3 w-3" />
+                ))}
+              </span>
+              <strong className="font-semibold text-bone-50">4.9 de 5</strong>
             </span>
-            <strong className="font-semibold text-bone-50">4.9 de 5</strong>
-            basado en 127 reseñas de Google
+            <span className="whitespace-nowrap">
+              basado en 127 reseñas de Google
+            </span>
           </span>
         </Reveal>
 
