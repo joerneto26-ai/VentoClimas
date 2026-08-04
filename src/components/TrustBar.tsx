@@ -39,18 +39,20 @@ export function TrustBar() {
         </StaggerGroup>
 
         <Reveal delay={0.1}>
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-bone-200/70 pt-8">
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
+          <div className="mt-12 border-t border-bone-200/70 pt-8">
+            <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-stone-500">
               Certificaciones
-            </span>
-            {badges.map((b) => (
-              <span
-                key={b}
-                className="inline-flex items-center gap-1.5 text-sm text-ink-700"
-              >
-                <Check className="h-4 w-4 text-sand-500" /> {b}
-              </span>
-            ))}
+            </p>
+            <div className="mx-auto mt-4 flex max-w-xs flex-col items-start gap-2.5 sm:max-w-none sm:flex-row sm:flex-wrap sm:items-center sm:justify-center sm:gap-x-6 sm:gap-y-3">
+              {badges.map((b) => (
+                <span
+                  key={b}
+                  className="inline-flex items-center gap-1.5 text-left text-sm text-ink-700"
+                >
+                  <Check className="h-4 w-4 shrink-0 text-sand-500" /> {b}
+                </span>
+              ))}
+            </div>
           </div>
         </Reveal>
       </div>
